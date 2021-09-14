@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server</name>
+    </assembly>
+    <members>
+        <member name="T:Server.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Server.Controllers.HomeController.apiResponseInfo">
+            <summary>
+            发送消息--登录
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

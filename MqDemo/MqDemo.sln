@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EasyNetQ", "EasyNetQ", "{8AC6947E-41BA-4DEF-89DE-D3C183491040}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "EasyNetQ\Server\Server.csproj", "{DF8884E8-C8EB-4437-A5D3-DA54B779D328}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client1", "EasyNetQ\Client1\Client1.csproj", "{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "EasyNetQ\Message\Messages\Messages.csproj", "{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RocketMQ", "RocketMQ", "{C33B586D-AA3C-4777-9DF1-8F47788456D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kafaka", "Kafaka", "{99A6F5B9-A2A9-4FE7-9A4C-90447C73F988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQServer", "RocketMQ\RocketMQServer\RocketMQServer.csproj", "{B73E502F-C0D1-49D8-894E-D1AFDFD15D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketMQClient", "RocketMQ\RocketMQClient\RocketMQClient.csproj", "{7E7DD391-18AF-4830-B988-7E9D4B5CF830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF8884E8-C8EB-4437-A5D3-DA54B779D328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8884E8-C8EB-4437-A5D3-DA54B779D328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8884E8-C8EB-4437-A5D3-DA54B779D328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8884E8-C8EB-4437-A5D3-DA54B779D328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73E502F-C0D1-49D8-894E-D1AFDFD15D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73E502F-C0D1-49D8-894E-D1AFDFD15D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73E502F-C0D1-49D8-894E-D1AFDFD15D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73E502F-C0D1-49D8-894E-D1AFDFD15D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7DD391-18AF-4830-B988-7E9D4B5CF830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7DD391-18AF-4830-B988-7E9D4B5CF830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7DD391-18AF-4830-B988-7E9D4B5CF830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7DD391-18AF-4830-B988-7E9D4B5CF830}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF8884E8-C8EB-4437-A5D3-DA54B779D328} = {8AC6947E-41BA-4DEF-89DE-D3C183491040}
+		{F1F086AD-0EEF-4AAE-829D-BA7C3F26E168} = {8AC6947E-41BA-4DEF-89DE-D3C183491040}
+		{DAA26DE9-19F3-4D90-8BC5-BAFE43BC6267} = {8AC6947E-41BA-4DEF-89DE-D3C183491040}
+		{B73E502F-C0D1-49D8-894E-D1AFDFD15D50} = {C33B586D-AA3C-4777-9DF1-8F47788456D7}
+		{7E7DD391-18AF-4830-B988-7E9D4B5CF830} = {C33B586D-AA3C-4777-9DF1-8F47788456D7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BE6E83B-5777-4156-B0D7-C8F8CF9CAA75}
+	EndGlobalSection
+EndGlobal
