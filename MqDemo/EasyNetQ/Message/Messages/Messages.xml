@@ -88,5 +88,25 @@
             是否首次操作 true 首次操作，false 非首次操作
             </summary>
         </member>
+        <member name="T:Messages.OrdersEvent">
+            <summary>
+            订单延时对象
+            </summary>
+        </member>
+        <member name="P:Messages.OrdersEvent.UserKeyId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Messages.OrdersEvent.OrdersId">
+            <summary>
+            订单ID
+            </summary>
+        </member>
+        <member name="P:Messages.OrdersEvent.CreateTime">
+            <summary>
+            订单创建时间
+            </summary>
+        </member>
     </members>
 </doc>

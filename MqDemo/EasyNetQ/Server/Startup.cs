@@ -43,7 +43,7 @@ namespace Server
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Server", Version = "v1" });
                 var basePath = AppDomain.CurrentDomain.BaseDirectory;
-                c.IncludeXmlComments(Path.Combine(basePath, "Project.xml"), true);
+                c.IncludeXmlComments(Path.Combine(basePath, "Server.xml"), true);
                 c.IgnoreObsoleteActions();
                 c.DocInclusionPredicate((docName, description) => true);
 

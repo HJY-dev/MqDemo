@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Client1</name>
+    </assembly>
+    <members>
+        <member name="M:Client1.EasyNetQ.LoginMessageConsume.Subscriber(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">
+            <summary>
+            接收信号--登录
+            </summary>
+            <param name="queueName"></param>
+            <param name="timeout"></param>
+            <param name="cancellationToken"></param>
+        </member>
+    </members>
+</doc>
