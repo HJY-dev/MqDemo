@@ -1,12 +1,8 @@
 ﻿using EasyNetQ;
 using EasyNetQ.Topology;
 using Messages;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Server.Controllers
 {
@@ -40,11 +36,16 @@ namespace Server.Controllers
             });
 
             var ex = bus.Advanced.ExchangeDeclare("AccountSystem.Exchange", ExchangeType.Topic);
-            bus.Advanced.PublishAsync(ex, "Login.Queue", false, message);
+            var queue = bus.Advanced.QueueDeclare("Login.Queue");
+
+
+            //bus.Advanced.Bind(ex, queue,"Login.Queue");
+
+            //bus.Advanced.PublishAsync(ex, "Login.Queue", false, message);
 
             // 5分钟后 发送消息
             bus.Scheduler.FuturePublishAsync(new OrdersEvent{ UserKeyId="admin",OrdersId=Guid.NewGuid().ToString("N"),CreateTime=DateTime.Now },TimeSpan.FromMinutes(5));
-
+            
             return ApiResponseInfo.Response(null, ApiResponseInfo.ResponseCode.SUCCESS, "");
         }
         

@@ -46,7 +46,7 @@ namespace Client1.EasyNetQ
                 //to end
             });
 
-            bus.PubSub.SubscribeAsync<string>("my_subscription_id", msg => Console.WriteLine(msg));
+            //bus.PubSub.SubscribeAsync<string>("my_subscription_id", msg => Console.WriteLine(msg));
 
             var ex = bus.Advanced.ExchangeDeclare(exchanges, ExchangeType.Topic);
             var qu = bus.Advanced.QueueDeclare(queueName);
