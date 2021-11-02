@@ -1,20 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
-namespace Rabbitmq_Client.Controllers
+namespace Rabbitmq_Client.Event
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class OrderEvent
     {
-        private readonly ILogger<WeatherForecastController> _logger;
         static IConnectionFactory factory = new ConnectionFactory()
         {
             HostName = "39.105.136.203",
@@ -24,16 +17,8 @@ namespace Rabbitmq_Client.Controllers
             Port = 5672
         };
 
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public void Subscriber(string exchanges, string queueName, TimeSpan timeout, CancellationToken cancellationToken)
         {
-            _logger = logger;
-        }
-
-        [HttpGet]
-        public string Get()
-        {
-            //死信队列
             string dlxQueueName = "dlx.queue";
 
             var connection = factory.CreateConnection();
@@ -56,8 +41,6 @@ namespace Rabbitmq_Client.Controllers
                     channel.BasicConsume(dlxQueueName, autoAck: false, consumer);
                 }
             }
-
-            return "";
         }
     }
 }
